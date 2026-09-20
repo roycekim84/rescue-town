@@ -1,0 +1,46 @@
+{
+  "catalogId": "CAT_001",
+  "localizationKey": "cat.001",
+  "appearance": {
+    "coatBase": "warm_orange",
+    "pattern": "tabby",
+    "faceMark": "cream_muzzle",
+    "eyeStyle": "amber_round",
+    "furLength": "short",
+    "tailType": "long_striped",
+    "bodyType": "standard",
+    "distinctiveMark": "forehead_tabby"
+  },
+  "personality": "active",
+  "baseAbilities": {
+    "care": 3,
+    "social": 6,
+    "focus": 3,
+    "activity": 8,
+    "sense": 4
+  },
+  "discovery": {
+    "minimumCenterLevel": 1,
+    "conditions": ["tutorial"],
+    "catalogHintBasic": "첫 구조 대상",
+    "catalogHintDetailed": "구조센터 근처 상자를 살펴보자."
+  },
+  "rescueScenario": {
+    "location": "old_rescue_center_box",
+    "mechanic": "food_lure",
+    "characterVariation": "approach_quickly"
+  },
+  "preferences": {
+    "preferredFacilities": ["farm", "park"],
+    "preferredActivities": ["walk", "play"],
+    "favoriteInteractionOrObject": "food"
+  },
+  "behaviorBias": {
+    "social": 1.0,
+    "food": 1.1,
+    "outdoor": 1.4,
+    "rest": 0.7,
+    "play": 1.2,
+    "quiet": 0.7
+  }
+}
