@@ -14,7 +14,13 @@
 첫 출시는 **시골 마을 하나**의 완성을 목표로 한다.
 지역 이동과 후속 지역은 v1.0 범위 밖이며 현재 기획하지 않는다.
 
+## Planning Status
+**Concept v1.0: LOCKED** — 이제 각 시스템의 상세 기획 단계로 진행한다.
+
+- [v1.0 Concept Lock](docs/00_CONCEPT_LOCK.md)
+
 ## Documents
+- [Concept Lock](docs/00_CONCEPT_LOCK.md)
 - [Game Vision](docs/00_GAME_VISION.md)
 - [Core Loop](docs/01_CORE_LOOP.md)
 - [v1 Scope](docs/02_V1_SCOPE.md)
