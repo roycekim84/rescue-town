@@ -1,0 +1,127 @@
+{
+  "sourceCommit": "011e24081671ecf38a66e86b3bb348feb9b0e4a2",
+  "status": "economic_proxy_not_real_players",
+  "units": "elapsed_real_days_from_start",
+  "results": [
+    {
+      "id": "base_2_noads",
+      "firstCashDay": 2.0003,
+      "center10Day": 29.625,
+      "economicFestivalReadyDay": 33.0139,
+      "collection50ProxyDay": 33.0,
+      "festivalProxyDay": 33.0139,
+      "adCounts": {},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":1.5007,"5":4.0021,"6":6.0069,"7":8.5208,"8":13.0417,"9":19.5833,"10":29.625},
+      "snapshots": {
+        "1":{"center":3,"residentsProxy":8},
+        "3":{"center":4,"residentsProxy":11},
+        "7":{"center":6,"residentsProxy":17},
+        "14":{"center":8,"residentsProxy":30},
+        "21":{"center":9,"residentsProxy":38},
+        "28":{"center":9,"residentsProxy":44}
+      }
+    },
+    {
+      "id": "base_2_ads",
+      "firstCashDay": 1.0017,
+      "center10Day": 18.6184,
+      "economicFestivalReadyDay": 19.5142,
+      "collection50ProxyDay": 22.0003,
+      "festivalProxyDay": 22.0003,
+      "adCounts": {"speedup":42,"offline":44,"boost":36},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":1.001,"5":2.5024,"6":4.001,"7":7.0142,"8":10.5351,"9":14.0767,"10":18.6184},
+      "snapshots": {
+        "1":{"center":3,"residentsProxy":8},
+        "3":{"center":5,"residentsProxy":12},
+        "7":{"center":6,"residentsProxy":20},
+        "14":{"center":8,"residentsProxy":34},
+        "21":{"center":10,"residentsProxy":47}
+      }
+    },
+    {
+      "id": "base_4_noads",
+      "firstCashDay": 1.5003,
+      "center10Day": 20.125,
+      "economicFestivalReadyDay": 22.7639,
+      "collection50ProxyDay": 21.75,
+      "festivalProxyDay": 22.7639,
+      "adCounts": {},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":1.2507,"5":2.7521,"6":4.2569,"7":6.0208,"8":9.0417,"9":13.5833,"10":20.125},
+      "snapshots": {
+        "1":{"center":3,"residentsProxy":8},
+        "3":{"center":5,"residentsProxy":12},
+        "7":{"center":7,"residentsProxy":25},
+        "14":{"center":9,"residentsProxy":37},
+        "21":{"center":10,"residentsProxy":46}
+      }
+    },
+    {
+      "id": "base_4_ads",
+      "firstCashDay": 0.7517,
+      "center10Day": 11.1184,
+      "economicFestivalReadyDay": 12.2642,
+      "collection50ProxyDay": 12.7503,
+      "festivalProxyDay": 12.7503,
+      "adCounts": {"speedup":43,"offline":51,"boost":42},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":0.751,"5":1.5024,"6":2.5014,"7":3.7642,"8":5.5351,"9":7.8267,"10":11.1184},
+      "snapshots": {
+        "1":{"center":4,"residentsProxy":9},
+        "3":{"center":6,"residentsProxy":17},
+        "7":{"center":8,"residentsProxy":33}
+      }
+    },
+    {
+      "id": "candidate_start5500_2_noads",
+      "firstCashDay": 0.017,
+      "center10Day": 28.125,
+      "economicFestivalReadyDay": 31.5139,
+      "collection50ProxyDay": 31.5,
+      "festivalProxyDay": 31.5139,
+      "adCounts": {},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":0.0167,"5":2.0021,"6":4.0069,"7":7.0208,"8":11.5417,"9":18.5833,"10":28.125},
+      "snapshots": {
+        "1":{"center":4,"residentsProxy":10},
+        "3":{"center":5,"residentsProxy":13},
+        "7":{"center":6,"residentsProxy":21},
+        "14":{"center":8,"residentsProxy":33},
+        "21":{"center":9,"residentsProxy":40},
+        "28":{"center":9,"residentsProxy":44}
+      }
+    },
+    {
+      "id": "sensitivity_slow_rescue_2_noads",
+      "firstCashDay": 2.0003,
+      "center10Day": 29.625,
+      "economicFestivalReadyDay": 33.0139,
+      "collection50ProxyDay": 33.0,
+      "festivalProxyDay": 33.0139,
+      "adCounts": {},
+      "centerReachedDay": {"1":0.0,"2":0.0083,"3":0.0199,"4":1.5007,"5":4.0021,"6":6.0069,"7":8.5208,"8":13.0417,"9":19.5833,"10":29.625},
+      "snapshots": {
+        "1":{"center":3,"residentsProxy":6},
+        "3":{"center":4,"residentsProxy":10},
+        "7":{"center":6,"residentsProxy":17},
+        "14":{"center":8,"residentsProxy":30},
+        "21":{"center":9,"residentsProxy":38},
+        "28":{"center":9,"residentsProxy":44}
+      }
+    },
+    {
+      "id": "ablation_2_offline_bonus_only",
+      "firstCashDay": 1.0014,
+      "center10Day": 18.6253,
+      "economicFestivalReadyDay": 20.0142,
+      "collection50ProxyDay": 22.0003,
+      "festivalProxyDay": 22.0003,
+      "adCounts": {"offline":44},
+      "centerReachedDay": {"1":0.0,"2":0.0021,"3":0.0053,"4":1.001,"5":3.0024,"6":4.5073,"7":7.5212,"8":11.042,"9":14.5837,"10":18.6253},
+      "snapshots": {
+        "1":{"center":3,"residentsProxy":8},
+        "3":{"center":4,"residentsProxy":11},
+        "7":{"center":6,"residentsProxy":19},
+        "14":{"center":8,"residentsProxy":33},
+        "21":{"center":10,"residentsProxy":47}
+      }
+    }
+  ]
+}
