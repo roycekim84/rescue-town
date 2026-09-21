@@ -1,0 +1,39 @@
+{
+  "version": "0.1-onboarding-draft",
+  "status": "design_contract_not_runtime_or_release_balance",
+  "sourceCommit": "2154d5a27a26210e93fe5c2a67e118ad17ca4582",
+  "target": {"firstBusinessActiveMinutes": [20, 30], "deadline": false, "clock": "cumulative_foreground_gameplay"},
+  "economyIntegration": {"baseFile": "data/economy_balance.json", "initialGrantIsReferenceOnly": true, "initialClaimKey": "v1_initial_grant", "initialGold": 1000, "additionalGrantTotal": 4500, "totalOneTimeSupport": 5500, "applyInitial5500ExperimentAlso": false, "lateEconomyChanged": false},
+  "grantRules": {"delivery": "automatic_when_all_facts_true", "currency": "gold", "claimScope": "save_id", "claimKeyStableAcrossContentVersions": true, "walletAndClaimAtomic": true, "source": "village_setup_support", "perCatBounty": false, "adMultiplierApplies": false},
+  "grants": [
+    {"id": "onboarding_support_automation", "amount": 600, "all": [{"kind": "building_level", "id": "rescue_center", "gte": 2}, {"kind": "assignment_ever", "id": "rescue_center"}]},
+    {"id": "onboarding_support_settlement", "amount": 2900, "all": [{"kind": "building_level", "id": "housing", "gte": 1}, {"kind": "building_level", "id": "park", "gte": 1}]},
+    {"id": "onboarding_support_production", "amount": 1000, "all": [{"kind": "building_level", "id": "rescue_center", "gte": 4}]}
+  ],
+  "firstRescues": [
+    {"catalogId": "CAT_001", "center": 1, "after": null, "requiresBuildings": {}, "locationId": "old_center_box", "mechanic": "food_lure", "searchSeconds": 0, "careSeconds": 45},
+    {"catalogId": "CAT_002", "center": 1, "after": "CAT_001", "requiresBuildings": {}, "locationId": "center_grass", "mechanic": "trust_wait", "searchSeconds": 0, "careSeconds": 30},
+    {"catalogId": "CAT_003", "center": 1, "after": "CAT_002", "requiresBuildings": {}, "locationId": "discarded_boxes", "mechanic": "obstacle_clear", "searchSeconds": 0, "careSeconds": 30},
+    {"catalogId": "CAT_004", "center": 2, "after": "CAT_003", "requiresBuildings": {}, "locationId": "center_yard", "mechanic": "trust_wait", "searchSeconds": 30, "careSeconds": 60},
+    {"catalogId": "CAT_005", "center": 2, "after": "CAT_004", "requiresBuildings": {}, "locationId": "center_food_area", "mechanic": "food_lure", "searchSeconds": 30, "careSeconds": 60},
+    {"catalogId": "CAT_006", "center": 3, "after": "CAT_005", "requiresBuildings": {"park": 1}, "locationId": "park_edge", "mechanic": "trust_wait", "searchSeconds": 45, "careSeconds": 90},
+    {"catalogId": "CAT_007", "center": 3, "after": "CAT_006", "requiresBuildings": {}, "locationId": "scenery_farm_road", "mechanic": "trail_search", "searchSeconds": 60, "careSeconds": 90},
+    {"catalogId": "CAT_008", "center": 3, "after": "CAT_007", "requiresBuildings": {}, "locationId": "scenery_empty_house", "mechanic": "trust_wait", "searchSeconds": 60, "careSeconds": 90}
+  ],
+  "rescueRules": {"guaranteedFirstEight": true, "otherSignalsDeferredUntil": "first_business_started", "concurrentRescueJobs": 1, "capacityIncludesReservedAndCarePending": true, "residentCountAfterCare": true, "temporaryLodgingCounts": true, "spawningGrantsResident": false, "careStartRequiresBasicInteractions": true, "careTimerStartsAfterThoseInteractions": true, "careCanUseManualFallback": true, "completedSignalExpires": false, "nextRescueAutoStartsOffline": false, "timersAdvanceOffline": true, "interactionSecondsPlanningRange": [15, 30], "optionalAnimationIsProgressGate": false},
+  "purchaseRules": {"scope": "until_first_business_started", "ordinaryCostsAndCenterGatesApply": true, "allowed": ["rescue_center:2", "rescue_center:3", "housing:first:1", "park:1", "rescue_center:4", "first_business:one_of_farm_fish_market:1"], "otherPaidOptions": "reveal_after_first_business_started", "firstBusinessChoiceLockedOnPaidStart": true, "firstBusinessMandatoryLevel": 1, "retryDoesNotChargeAgain": true, "freeActionsAvailable": ["observe", "follow", "rename", "care", "staff_reassignment", "catalog", "profile"]},
+  "firstBusiness": {"choices": ["farm", "fish_market"], "suggested": "farm", "minimumStaff": 1, "suggestedResident": "CAT_001", "residentChoiceIsOptional": true, "completeWhenAssignedBuildingOrganicGoldGte": 1, "economyLedgerNotAnimationCallback": true, "noScriptedIncomeGrant": true, "completeFact": "first_business_started"},
+  "steps": [
+    {"id": "meet_mango", "targetMinutes": [0, 2], "goal": "CAT_001을 구조하고 먹이·청결·안정 돌봄을 배운다."},
+    {"id": "first_three", "targetMinutes": [2, 5], "goal": "CAT_002와 CAT_003을 만나 임시숙소 주민 3마리가 된다."},
+    {"id": "first_automation", "targetMinutes": [5, 8], "goal": "센터2·직원1명 배치·600G 지원, 나비와 호두를 돌본다."},
+    {"id": "first_home", "targetMinutes": [8, 12], "goal": "센터3·첫 주택·공원을 완성하고 2,900G를 받는다."},
+    {"id": "residents_eight", "targetMinutes": [12, 20], "goal": "두부·보리·모카를 돌보며 산책·프로필·친구 관찰을 경험한다."},
+    {"id": "center_four", "targetMinutes": [20, 23], "goal": "주민8·발전도100·3,000G로 센터4를 확장하고 1,000G를 받는다."},
+    {"id": "first_business", "targetMinutes": [23, 27], "goal": "농장 또는 어시장 하나를 선택·건설·배치해 첫 실제 영업수입을 낸다."},
+    {"id": "free_play_handoff", "targetMinutes": [27, 30], "goal": "숙련 기록·다음 목표·다른 시설 선택·복귀 안내를 보고 자유 운영으로 넘어간다."}
+  ],
+  "adPolicy": {"suppressUntilFirstBusiness": true, "minimumForegroundGameplaySeconds": 1200, "eligibility": "first_business_started AND foreground_gameplay_seconds>=1200", "interstitialDuringOnboarding": false, "rewardsRequired": false, "eligibleOfflineBaseAlwaysGranted": true, "deferredOfflineAdOffersBacklogged": false, "requireContextualValue": true, "forcedFirstAdTutorial": false},
+  "persistence": {"save": ["save_id", "onboarding_version", "completed_step_ids", "claimed_grant_ids", "historical_assignment_buildings", "first_business_choice", "first_business_started", "reserved_catalog_id", "rescue_job_id", "rescue_job_phase", "rescue_job_progress", "construction_job_ids", "foreground_gameplay_seconds"], "resume": "reconcile_persisted_world_facts_then_first_unfinished_step", "skipTutorial": "skip_coachmarks_only_keep_rules_grants_and_progress", "repeatTutorial": "presentation_only_no_new_grants", "existingSave": "preserve_wallet_and_residents_reconcile_eligible_missing_grants_once_never_regrant_initial_gold"},
+  "completionSnapshotTarget": {"centerLevel": 4, "residentCount": 8, "requiredBuildings": {"housing": 1, "park": 1}, "firstBusinessCount": 1, "suggestedWorkingResidents": 2, "allEightUseOriginalCatalogIds": true, "nextGoal": "센터5·카페 해금 조건을 안내하되 30분 도달 자체를 요구하지 않는다."}
+}
