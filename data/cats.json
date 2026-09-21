@@ -1,0 +1,1664 @@
+[
+  {
+    "catalogId": "CAT_001",
+    "localizationKey": "cat.001",
+    "workingNameKo": "망고",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 3,
+      "activity": 8,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "warm_orange",
+      "pattern": "tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 1,
+      "primaryCondition": "tutorial"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_002",
+    "localizationKey": "cat.002",
+    "workingNameKo": "구름",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 7,
+      "social": 5,
+      "focus": 6,
+      "activity": 2,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "white",
+      "pattern": "solid_longhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 1,
+      "primaryCondition": "rescue_center_grass"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_003",
+    "localizationKey": "cat.003",
+    "workingNameKo": "탄이",
+    "personality": "clever",
+    "baseAbilities": {
+      "care": 4,
+      "social": 5,
+      "focus": 8,
+      "activity": 5,
+      "sense": 3
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "tuxedo"
+    },
+    "discovery": {
+      "minimumCenterLevel": 1,
+      "primaryCondition": "discarded_boxes"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "focus"
+    }
+  },
+  {
+    "catalogId": "CAT_004",
+    "localizationKey": "cat.004",
+    "workingNameKo": "나비",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 5,
+      "social": 8,
+      "focus": 3,
+      "activity": 5,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "calico",
+      "pattern": "calico"
+    },
+    "discovery": {
+      "minimumCenterLevel": 2,
+      "primaryCondition": "resident_follow"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_005",
+    "localizationKey": "cat.005",
+    "workingNameKo": "호두",
+    "personality": "foodie",
+    "baseAbilities": {
+      "care": 4,
+      "social": 6,
+      "focus": 4,
+      "activity": 7,
+      "sense": 3
+    },
+    "appearance": {
+      "coatBase": "brown",
+      "pattern": "tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 2,
+      "primaryCondition": "food_scent"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "fish_market",
+        "restaurant",
+        "bakery"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "food"
+    }
+  },
+  {
+    "catalogId": "CAT_006",
+    "localizationKey": "cat.006",
+    "workingNameKo": "두부",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 6,
+      "focus": 5,
+      "activity": 3,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "white_gray",
+      "pattern": "bicolor"
+    },
+    "discovery": {
+      "minimumCenterLevel": 3,
+      "primaryCondition": "park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "rescue_center",
+        "clinic",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_007",
+    "localizationKey": "cat.007",
+    "workingNameKo": "보리",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 4,
+      "social": 4,
+      "focus": 5,
+      "activity": 8,
+      "sense": 3
+    },
+    "appearance": {
+      "coatBase": "gray_brown",
+      "pattern": "mackerel_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 3,
+      "primaryCondition": "farm_road"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_008",
+    "localizationKey": "cat.008",
+    "workingNameKo": "모카",
+    "personality": "shy",
+    "baseAbilities": {
+      "care": 4,
+      "social": 2,
+      "focus": 8,
+      "activity": 3,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "brown_point",
+      "pattern": "point"
+    },
+    "discovery": {
+      "minimumCenterLevel": 3,
+      "primaryCondition": "quiet_house"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "home",
+        "workshop"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "quiet"
+    }
+  },
+  {
+    "catalogId": "CAT_009",
+    "localizationKey": "cat.009",
+    "workingNameKo": "콩이",
+    "personality": "playful",
+    "baseAbilities": {
+      "care": 3,
+      "social": 5,
+      "focus": 4,
+      "activity": 7,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "black",
+      "pattern": "solid"
+    },
+    "discovery": {
+      "minimumCenterLevel": 3,
+      "primaryCondition": "box_event"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "workshop"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "play"
+    }
+  },
+  {
+    "catalogId": "CAT_010",
+    "localizationKey": "cat.010",
+    "workingNameKo": "설이",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 6,
+      "social": 4,
+      "focus": 7,
+      "activity": 2,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "white",
+      "pattern": "solid_oddeye"
+    },
+    "discovery": {
+      "minimumCenterLevel": 3,
+      "primaryCondition": "sunny_spot"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_011",
+    "localizationKey": "cat.011",
+    "workingNameKo": "감자",
+    "personality": "foodie",
+    "baseAbilities": {
+      "care": 4,
+      "social": 6,
+      "focus": 3,
+      "activity": 7,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "cream",
+      "pattern": "tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 4,
+      "primaryCondition": "fish_market"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "fish_market",
+        "restaurant"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "food"
+    }
+  },
+  {
+    "catalogId": "CAT_012",
+    "localizationKey": "cat.012",
+    "workingNameKo": "루루",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 5,
+      "social": 8,
+      "focus": 4,
+      "activity": 5,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "gray_white",
+      "pattern": "bicolor_socks"
+    },
+    "discovery": {
+      "minimumCenterLevel": 4,
+      "primaryCondition": "park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_013",
+    "localizationKey": "cat.013",
+    "workingNameKo": "밤이",
+    "personality": "shy",
+    "baseAbilities": {
+      "care": 5,
+      "social": 2,
+      "focus": 8,
+      "activity": 4,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "black",
+      "pattern": "solid"
+    },
+    "discovery": {
+      "minimumCenterLevel": 4,
+      "primaryCondition": "empty_house_evening"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "home",
+        "workshop"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "quiet"
+    }
+  },
+  {
+    "catalogId": "CAT_014",
+    "localizationKey": "cat.014",
+    "workingNameKo": "토리",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 5,
+      "focus": 4,
+      "activity": 8,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "brown",
+      "pattern": "mackerel_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 4,
+      "primaryCondition": "farm"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_015",
+    "localizationKey": "cat.015",
+    "workingNameKo": "라떼",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 6,
+      "social": 5,
+      "focus": 6,
+      "activity": 2,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "cream_point",
+      "pattern": "point"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "cafe_warm_spot"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "cafe",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_016",
+    "localizationKey": "cat.016",
+    "workingNameKo": "초코",
+    "personality": "playful",
+    "baseAbilities": {
+      "care": 3,
+      "social": 5,
+      "focus": 4,
+      "activity": 7,
+      "sense": 8
+    },
+    "appearance": {
+      "coatBase": "dark_brown",
+      "pattern": "mixed"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "farm_storage"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "workshop",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "play"
+    }
+  },
+  {
+    "catalogId": "CAT_017",
+    "localizationKey": "cat.017",
+    "workingNameKo": "소금",
+    "personality": "clever",
+    "baseAbilities": {
+      "care": 5,
+      "social": 4,
+      "focus": 8,
+      "activity": 4,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "white_gray",
+      "pattern": "bicolor"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "irrigation"
+    },
+    "rescueScenario": {
+      "mechanic": "sound_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "clinic"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "focus"
+    }
+  },
+  {
+    "catalogId": "CAT_018",
+    "localizationKey": "cat.018",
+    "workingNameKo": "단추",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 6,
+      "focus": 4,
+      "activity": 4,
+      "sense": 3
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "cow"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "resident_follow"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "rescue_center",
+        "park",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_019",
+    "localizationKey": "cat.019",
+    "workingNameKo": "마루",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 4,
+      "activity": 8,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "deep_orange",
+      "pattern": "tabby_white_chest"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "rural_road"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_020",
+    "localizationKey": "cat.020",
+    "workingNameKo": "깨비",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 4,
+      "social": 8,
+      "focus": 3,
+      "activity": 6,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "tortoiseshell",
+      "pattern": "chaos"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "busy_park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_021",
+    "localizationKey": "cat.021",
+    "workingNameKo": "우유",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 6,
+      "focus": 5,
+      "activity": 2,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "white",
+      "pattern": "solid"
+    },
+    "discovery": {
+      "minimumCenterLevel": 5,
+      "primaryCondition": "cafe_backdoor"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "cafe",
+        "rescue_center",
+        "clinic"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_022",
+    "localizationKey": "cat.022",
+    "workingNameKo": "쿠키",
+    "personality": "foodie",
+    "baseAbilities": {
+      "care": 3,
+      "social": 7,
+      "focus": 3,
+      "activity": 5,
+      "sense": 8
+    },
+    "appearance": {
+      "coatBase": "cream_brown",
+      "pattern": "patched"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "food_network"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "cafe",
+        "restaurant",
+        "bakery"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "food"
+    }
+  },
+  {
+    "catalogId": "CAT_023",
+    "localizationKey": "cat.023",
+    "workingNameKo": "까미",
+    "personality": "shy",
+    "baseAbilities": {
+      "care": 5,
+      "social": 3,
+      "focus": 8,
+      "activity": 4,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "bib"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "general_store_evening"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "general_store",
+        "workshop"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "quiet"
+    }
+  },
+  {
+    "catalogId": "CAT_024",
+    "localizationKey": "cat.024",
+    "workingNameKo": "복실",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 7,
+      "social": 4,
+      "focus": 6,
+      "activity": 2,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "gray",
+      "pattern": "solid_longhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "housing"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "home",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_025",
+    "localizationKey": "cat.025",
+    "workingNameKo": "땅콩",
+    "personality": "playful",
+    "baseAbilities": {
+      "care": 3,
+      "social": 5,
+      "focus": 4,
+      "activity": 8,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "brown",
+      "pattern": "small_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "park_play"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "play"
+    }
+  },
+  {
+    "catalogId": "CAT_026",
+    "localizationKey": "cat.026",
+    "workingNameKo": "치즈",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 4,
+      "social": 8,
+      "focus": 3,
+      "activity": 6,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "pale_orange",
+      "pattern": "tabby_white_socks"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "restaurant"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "restaurant",
+        "cafe",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_027",
+    "localizationKey": "cat.027",
+    "workingNameKo": "별이",
+    "personality": "clever",
+    "baseAbilities": {
+      "care": 4,
+      "social": 4,
+      "focus": 8,
+      "activity": 5,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "star_chest"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "night_village"
+    },
+    "rescueScenario": {
+      "mechanic": "sound_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "square"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "focus"
+    }
+  },
+  {
+    "catalogId": "CAT_028",
+    "localizationKey": "cat.028",
+    "workingNameKo": "달이",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 6,
+      "social": 4,
+      "focus": 7,
+      "activity": 3,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "silver",
+      "pattern": "tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "evening_park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_029",
+    "localizationKey": "cat.029",
+    "workingNameKo": "쪼꼬",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 3,
+      "activity": 8,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "dark_orange",
+      "pattern": "compact_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 6,
+      "primaryCondition": "restaurant_delivery"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "restaurant",
+        "farm"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_030",
+    "localizationKey": "cat.030",
+    "workingNameKo": "솜이",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 5,
+      "focus": 6,
+      "activity": 2,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "white_gray",
+      "pattern": "longhair_tail"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "settled_village"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "rescue_center",
+        "home",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_031",
+    "localizationKey": "cat.031",
+    "workingNameKo": "코코",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 4,
+      "social": 8,
+      "focus": 4,
+      "activity": 4,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "chocolate_point",
+      "pattern": "point"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "workshop"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_032",
+    "localizationKey": "cat.032",
+    "workingNameKo": "후추",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 5,
+      "focus": 6,
+      "activity": 8,
+      "sense": 3
+    },
+    "appearance": {
+      "coatBase": "dark_gray",
+      "pattern": "mackerel_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "workshop_delivery"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "farm"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_033",
+    "localizationKey": "cat.033",
+    "workingNameKo": "미미",
+    "personality": "shy",
+    "baseAbilities": {
+      "care": 5,
+      "social": 3,
+      "focus": 6,
+      "activity": 3,
+      "sense": 8
+    },
+    "appearance": {
+      "coatBase": "calico",
+      "pattern": "longhair_calico"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "workshop_storage"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "quiet"
+    }
+  },
+  {
+    "catalogId": "CAT_034",
+    "localizationKey": "cat.034",
+    "workingNameKo": "콩떡",
+    "personality": "foodie",
+    "baseAbilities": {
+      "care": 5,
+      "social": 7,
+      "focus": 3,
+      "activity": 4,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "cream",
+      "pattern": "round_point"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "food_storage"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "restaurant",
+        "farm",
+        "bakery"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "food"
+    }
+  },
+  {
+    "catalogId": "CAT_035",
+    "localizationKey": "cat.035",
+    "workingNameKo": "연탄",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 6,
+      "social": 3,
+      "focus": 7,
+      "activity": 2,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "black",
+      "pattern": "solid_longhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 7,
+      "primaryCondition": "night_park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_036",
+    "localizationKey": "cat.036",
+    "workingNameKo": "하루",
+    "personality": "clever",
+    "baseAbilities": {
+      "care": 5,
+      "social": 4,
+      "focus": 8,
+      "activity": 6,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "gray_white",
+      "pattern": "tabby_socks"
+    },
+    "discovery": {
+      "minimumCenterLevel": 8,
+      "primaryCondition": "clinic_machine"
+    },
+    "rescueScenario": {
+      "mechanic": "sound_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "clinic",
+        "workshop"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "focus"
+    }
+  },
+  {
+    "catalogId": "CAT_037",
+    "localizationKey": "cat.037",
+    "workingNameKo": "봄이",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 7,
+      "focus": 4,
+      "activity": 3,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "pale_calico",
+      "pattern": "calico"
+    },
+    "discovery": {
+      "minimumCenterLevel": 8,
+      "primaryCondition": "grooming_area"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "grooming",
+        "rescue_center",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_038",
+    "localizationKey": "cat.038",
+    "workingNameKo": "뽀또",
+    "personality": "playful",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 3,
+      "activity": 8,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "cow"
+    },
+    "discovery": {
+      "minimumCenterLevel": 8,
+      "primaryCondition": "grooming_props"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "grooming",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "play"
+    }
+  },
+  {
+    "catalogId": "CAT_039",
+    "localizationKey": "cat.039",
+    "workingNameKo": "아리",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 5,
+      "social": 8,
+      "focus": 5,
+      "activity": 3,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "blue_gray",
+      "pattern": "solid"
+    },
+    "discovery": {
+      "minimumCenterLevel": 8,
+      "primaryCondition": "social_park"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "park",
+        "cafe",
+        "square"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_040",
+    "localizationKey": "cat.040",
+    "workingNameKo": "누리",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 4,
+      "social": 5,
+      "focus": 4,
+      "activity": 8,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "cream",
+      "pattern": "medium_longhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 8,
+      "primaryCondition": "village_outskirts"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_041",
+    "localizationKey": "cat.041",
+    "workingNameKo": "밀크",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 6,
+      "focus": 5,
+      "activity": 3,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "white_cream",
+      "pattern": "bicolor"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "clinic"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "clinic",
+        "rescue_center"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_042",
+    "localizationKey": "cat.042",
+    "workingNameKo": "오레오",
+    "personality": "foodie",
+    "baseAbilities": {
+      "care": 4,
+      "social": 7,
+      "focus": 4,
+      "activity": 5,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "tuxedo_socks"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "bakery"
+    },
+    "rescueScenario": {
+      "mechanic": "food_lure"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "bakery",
+        "restaurant",
+        "cafe"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "food"
+    }
+  },
+  {
+    "catalogId": "CAT_043",
+    "localizationKey": "cat.043",
+    "workingNameKo": "은하",
+    "personality": "shy",
+    "baseAbilities": {
+      "care": 5,
+      "social": 3,
+      "focus": 8,
+      "activity": 2,
+      "sense": 8
+    },
+    "appearance": {
+      "coatBase": "silver",
+      "pattern": "solid_longhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "square_evening"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "square",
+        "park",
+        "home"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "quiet"
+    }
+  },
+  {
+    "catalogId": "CAT_044",
+    "localizationKey": "cat.044",
+    "workingNameKo": "단비",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 6,
+      "social": 8,
+      "focus": 4,
+      "activity": 4,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "gray_calico",
+      "pattern": "calico"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "rain_or_social_fallback"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "cafe",
+        "square"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  },
+  {
+    "catalogId": "CAT_045",
+    "localizationKey": "cat.045",
+    "workingNameKo": "호박",
+    "personality": "active",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 4,
+      "activity": 8,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "deep_orange",
+      "pattern": "bold_tabby"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "developed_farm"
+    },
+    "rescueScenario": {
+      "mechanic": "trail_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "farm",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "outdoor"
+    }
+  },
+  {
+    "catalogId": "CAT_046",
+    "localizationKey": "cat.046",
+    "workingNameKo": "메리",
+    "personality": "relaxed",
+    "baseAbilities": {
+      "care": 7,
+      "social": 5,
+      "focus": 7,
+      "activity": 2,
+      "sense": 5
+    },
+    "appearance": {
+      "coatBase": "cream_brown",
+      "pattern": "point_mediumhair"
+    },
+    "discovery": {
+      "minimumCenterLevel": 9,
+      "primaryCondition": "residential_garden"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "home",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "rest"
+    }
+  },
+  {
+    "catalogId": "CAT_047",
+    "localizationKey": "cat.047",
+    "workingNameKo": "까꿍",
+    "personality": "playful",
+    "baseAbilities": {
+      "care": 3,
+      "social": 6,
+      "focus": 4,
+      "activity": 7,
+      "sense": 8
+    },
+    "appearance": {
+      "coatBase": "black_white",
+      "pattern": "face_blaze"
+    },
+    "discovery": {
+      "minimumCenterLevel": 10,
+      "primaryCondition": "late_boxes"
+    },
+    "rescueScenario": {
+      "mechanic": "obstacle_clear"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "play"
+    }
+  },
+  {
+    "catalogId": "CAT_048",
+    "localizationKey": "cat.048",
+    "workingNameKo": "단이",
+    "personality": "clever",
+    "baseAbilities": {
+      "care": 5,
+      "social": 4,
+      "focus": 8,
+      "activity": 6,
+      "sense": 4
+    },
+    "appearance": {
+      "coatBase": "gray_white",
+      "pattern": "mackerel_white_chest"
+    },
+    "discovery": {
+      "minimumCenterLevel": 10,
+      "primaryCondition": "automation_route"
+    },
+    "rescueScenario": {
+      "mechanic": "sound_search"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "workshop",
+        "clinic"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "focus"
+    }
+  },
+  {
+    "catalogId": "CAT_049",
+    "localizationKey": "cat.049",
+    "workingNameKo": "꽃님",
+    "personality": "caring",
+    "baseAbilities": {
+      "care": 8,
+      "social": 7,
+      "focus": 4,
+      "activity": 3,
+      "sense": 7
+    },
+    "appearance": {
+      "coatBase": "bright_calico",
+      "pattern": "longhair_calico"
+    },
+    "discovery": {
+      "minimumCenterLevel": 10,
+      "primaryCondition": "developed_square"
+    },
+    "rescueScenario": {
+      "mechanic": "trust_wait"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "square",
+        "park"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "care"
+    }
+  },
+  {
+    "catalogId": "CAT_050",
+    "localizationKey": "cat.050",
+    "workingNameKo": "마음",
+    "personality": "social",
+    "baseAbilities": {
+      "care": 6,
+      "social": 7,
+      "focus": 5,
+      "activity": 5,
+      "sense": 6
+    },
+    "appearance": {
+      "coatBase": "warm_gray_brown",
+      "pattern": "mixed_cream_muzzle"
+    },
+    "discovery": {
+      "minimumCenterLevel": 10,
+      "primaryCondition": "final_arrival"
+    },
+    "rescueScenario": {
+      "mechanic": "welcome"
+    },
+    "preferences": {
+      "preferredFacilities": [
+        "rescue_center",
+        "square"
+      ]
+    },
+    "behaviorBias": {
+      "signature": "social"
+    }
+  }
+]
