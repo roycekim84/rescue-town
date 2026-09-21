@@ -1,0 +1,21 @@
+{
+  "version": "0.1-onboarding-contract",
+  "sourceCommit": "2154d5a27a26210e93fe5c2a67e118ad17ca4582",
+  "testMode": "pinned_projection_and_pure_reference_reducer_not_engine",
+  "command": "python3 -S tools/test_onboarding_contract.py --snapshot",
+  "testsRun": 18,
+  "failures": 0,
+  "errors": 0,
+  "initialGrantGold": 1000,
+  "additionalMilestoneSupportGold": 4500,
+  "totalOneTimeSupportGold": 5500,
+  "zeroIncomeBudgetTraces": {
+    "farm": [{"event":"start","walletGold":1000},{"event":"rescue_center:2","walletGold":900},{"event":"assign:0","walletGold":1500},{"event":"rescue_center:3","walletGold":1200},{"event":"housing:1","walletGold":1000},{"event":"park:1","walletGold":3600},{"event":"rescue_center:4","walletGold":1600},{"event":"farm:1","walletGold":600}],
+    "fish_market": [{"event":"start","walletGold":1000},{"event":"rescue_center:2","walletGold":900},{"event":"assign:0","walletGold":1500},{"event":"rescue_center:3","walletGold":1200},{"event":"housing:1","walletGold":1000},{"event":"park:1","walletGold":3600},{"event":"rescue_center:4","walletGold":1600},{"event":"fish_market:1","walletGold":400}]
+  },
+  "developmentBeforeCenter4": 100,
+  "firstEightRescueCenters": [1,1,1,2,2,3,3,3],
+  "checks": ["grants never repeated by pure reducer","before/after-checkpoint JSON roundtrip","late milestone reconciliation","early catalog ID and center references","no farm dependency for CAT_007","construction budget and development to center4","reservation-cap arithmetic","ads require experience AND playtime"],
+  "notValidated": ["arbitrary device-crash atomic persistence","runtime duplicate-rescue handling","actual player first-business timing","rendering/animation/UX enjoyment","ad SDK or store compliance","full 50-cat condition reachability","full-run simulation with split grants"],
+  "comparisonWarning": "35-document initial5500 experiment is not this split-grant policy; its completion time is not reused as a new result."
+}
