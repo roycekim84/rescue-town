@@ -1,0 +1,230 @@
+{
+  "version": "0.1-working",
+  "rules": {
+    "buildingCurrentLevelCap": "min(building.maxLevel,rescueCenterLevel)",
+    "residentCapSource": "rescue_center_level",
+    "centerUpgradeAxes": [
+      "residentCount",
+      "villageDevelopment",
+      "jobMastery",
+      "gold"
+    ],
+    "bondIsGate": false,
+    "relationshipIsGate": false
+  },
+  "levels": [
+    {
+      "level": 1,
+      "cap": 3,
+      "dev": 0,
+      "mastery": null,
+      "unlocks": [
+        "rescue_center"
+      ],
+      "note": "direct_care",
+      "upgradeRequirements": null
+    },
+    {
+      "level": 2,
+      "cap": 5,
+      "dev": 0,
+      "mastery": null,
+      "unlocks": [
+        "first_staff_assignment",
+        "care_automation"
+      ],
+      "note": "automation_intro",
+      "upgradeRequirements": {
+        "residentCount": 3,
+        "villageDevelopment": 0,
+        "jobMastery": null,
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 3,
+      "cap": 8,
+      "dev": 50,
+      "mastery": null,
+      "unlocks": [
+        "housing",
+        "park",
+        "settlement"
+      ],
+      "note": "village_intro",
+      "upgradeRequirements": {
+        "residentCount": 5,
+        "villageDevelopment": 50,
+        "jobMastery": null,
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 4,
+      "cap": 12,
+      "dev": 150,
+      "mastery": null,
+      "unlocks": [
+        "farm",
+        "fish_market",
+        "job_mastery_intro"
+      ],
+      "note": "economy_intro",
+      "upgradeRequirements": {
+        "residentCount": 8,
+        "villageDevelopment": 150,
+        "jobMastery": null,
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 5,
+      "cap": 17,
+      "dev": 350,
+      "mastery": {
+        "threshold": 25,
+        "count": 1
+      },
+      "unlocks": [
+        "cafe",
+        "relationships_visible"
+      ],
+      "note": "village_identity",
+      "upgradeRequirements": {
+        "residentCount": 12,
+        "villageDevelopment": 350,
+        "jobMastery": {
+          "threshold": 25,
+          "count": 1
+        },
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 6,
+      "cap": 23,
+      "dev": 650,
+      "mastery": {
+        "threshold": 25,
+        "count": 2
+      },
+      "unlocks": [
+        "restaurant",
+        "general_store",
+        "supply_links"
+      ],
+      "note": "economy_links",
+      "upgradeRequirements": {
+        "residentCount": 15,
+        "villageDevelopment": 650,
+        "jobMastery": {
+          "threshold": 25,
+          "count": 2
+        },
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 7,
+      "cap": 30,
+      "dev": 1000,
+      "mastery": {
+        "threshold": 25,
+        "count": 4
+      },
+      "unlocks": [
+        "workshop",
+        "interior"
+      ],
+      "note": "customization",
+      "upgradeRequirements": {
+        "residentCount": 21,
+        "villageDevelopment": 1000,
+        "jobMastery": {
+          "threshold": 25,
+          "count": 4
+        },
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 8,
+      "cap": 37,
+      "dev": 1500,
+      "mastery": {
+        "threshold": 50,
+        "count": 3
+      },
+      "unlocks": [
+        "grooming",
+        "clinic"
+      ],
+      "note": "specialization",
+      "upgradeRequirements": {
+        "residentCount": 28,
+        "villageDevelopment": 1500,
+        "jobMastery": {
+          "threshold": 50,
+          "count": 3
+        },
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 9,
+      "cap": 44,
+      "dev": 2200,
+      "mastery": {
+        "threshold": 50,
+        "count": 6
+      },
+      "unlocks": [
+        "bakery",
+        "town_square"
+      ],
+      "note": "late_village",
+      "upgradeRequirements": {
+        "residentCount": 35,
+        "villageDevelopment": 2200,
+        "jobMastery": {
+          "threshold": 50,
+          "count": 6
+        },
+        "gold": "TBD_BALANCE"
+      }
+    },
+    {
+      "level": 10,
+      "cap": 50,
+      "dev": 3000,
+      "mastery": {
+        "threshold": 75,
+        "count": 3
+      },
+      "unlocks": [
+        "final_cat_pool",
+        "festival_preparation"
+      ],
+      "note": "final_growth",
+      "upgradeRequirements": {
+        "residentCount": 43,
+        "villageDevelopment": 3000,
+        "jobMastery": {
+          "threshold": 75,
+          "count": 3
+        },
+        "gold": "TBD_BALANCE"
+      }
+    }
+  ],
+  "ending": {
+    "requires": {
+      "rescueCenterLevel": 10,
+      "catalogCount": 50,
+      "villageDevelopment": 3500,
+      "majorBuildingsBuilt": true
+    },
+    "allBuildingsMaxRequired": false,
+    "event": "town_festival"
+  }
+}
