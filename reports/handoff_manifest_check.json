@@ -1,0 +1,7 @@
+{
+  "check": "handoff_manifest_only",
+  "status": "PASS",
+  "scope": "JSON syntax, unique milestone IDs, acyclic ordered dependencies, resident/housing counts and honest unstarted states",
+  "engineTestsRun": false,
+  "oldSimulationRerun": false
+}

@@ -1,0 +1,43 @@
+# Unity generated state (never ignore .meta files)
+**/[Ll]ibrary/
+**/[Tt]emp/
+**/[Oo]bj/
+**/[Ll]ogs/
+**/[Uu]ser[Ss]ettings/
+**/[Bb]uilds/
+artifacts/
+.DS_Store
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+# Python caches
+__pycache__/
+*.py[cod]
+# Local service/configuration and credentials
+node_modules/
+.wrangler/
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+*.key
+config/local/
+# Real player saves and local databases
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+# Do not commit generated binary delivery artifacts
+*.apk
+*.aab
+*.ipa
+*.xcarchive/

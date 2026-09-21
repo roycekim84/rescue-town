@@ -2,47 +2,54 @@
 
 > 구조한 고양이들이 주민이 되고, 주민들이 스스로 살아가며 성장시키는 작은 시골 마을.
 
-## 목표와 현재 상태
-Astra로 **시골 마을 v1.0을 광고 수익화까지 포함한 완결된 모바일 게임**으로 만든다.
-고양이50종/최대50마리, 네 발 고양이의 실제 근무·야외 생활, 직접 돌봄→자동화가 핵심이다.
-지역 이동과 후속 지역은 현재 범위 밖. 컨셉 LOCKED, 상세기획·검증 진행 중.
+## 지금 시작할 곳
+**기획 인계와 Astra 구현 작업서 준비 완료. 다음 작업은 M0 환경 확인과 Unity 프로젝트 생성이다.**
+실제 게임 구현·아트 생산·모바일 광고 연동·서버 배포·스토어 출시는 아직 완료되지 않았다.
 
-- 첫30분 분할지원/초기8마리와50개 실행가능 발견조건을 정의했다.
-- 통합 v0.2는13개 시나리오/38개 계약·이벤트 검사를 실행했다.1개는 추가조건 제거 대조군이다.
-- 저장·정산·광고 v0.1 명세와51개 참고 계약/로컬SQLite 예외경계 테스트를 추가했다.
-- **게임 엔진·실기기·실제 광고SDK·SSV서버·저장 어댑터·스토어 출시·아트 제작은 완료가 아니다.**
-- 후반 신규고양이 공백은 미해결 밸런스 항목. 모형 결과는 실제 사람의 완주일수나 출시품질이 아니다.
+- [Astra 첫 구현 프롬프트](prompts/ASTRA_START.md)
+- [총괄 구현 작업서 M0~M7](docs/47_ASTRA_IMPLEMENTATION_WORKBOOK.md)
+- [기술 선택: Unity·광고·SQLite·영수증 서비스](docs/45_TECH_STACK_DECISIONS.md)
+- [최신 사양 우선순위·이전 초안 대체·공식 근거](docs/49_SPEC_AUTHORITY_AND_HANDOFF.md)
+- [출시 인수 기준](docs/48_RELEASE_ACCEPTANCE.md)
+- [현재 구현 상태](docs/50_IMPLEMENTATION_STATUS.md) / [기계판독 작업 계획](data/implementation_plan.json)
 
-## 최신 문서 읽는 순서
-1. [컨셉 기준선](docs/00_CONCEPT_LOCK.md)
-2. [주민 정체성](docs/06_RESIDENT_SIMULATION.md) / [성장](docs/07_RESIDENT_GROWTH.md) / [생활](docs/11_LIFE_AI_AND_RELATIONSHIPS.md)
-3. [건물](docs/16_BUILDING_LEVEL_SPEC.md) / [아트](docs/19_ART_DIRECTION.md)
-4. [진행](docs/31_PROGRESSION_DATA_SPEC.md) / [경제](docs/33_ECONOMY_BALANCE_V01.md)
-5. [정적 경제 검사](docs/34_ECONOMY_VALIDATION_REPORT.md) / [과거 대체구조 모형](docs/35_PROGRESSION_SIMULATION_V01.md)
-6. [첫30분](docs/36_FIRST_30_MINUTES.md)
-7. [발견조건](docs/37_DISCOVERY_RULES_V01.md) / [검증](docs/38_DISCOVERY_VALIDATION_V01.md)
-8. [통합 진행·후반 공백](docs/39_INTEGRATED_PROGRESSION_V02.md) / [통합검사](docs/40_INTEGRATED_VALIDATION_REPORT.md)
-9. **[저장·복구](docs/41_SAVE_AND_RECOVERY_CONTRACT.md)**
-10. **[오프라인 정산](docs/42_OFFLINE_SETTLEMENT_CONTRACT.md)**
-11. **[광고 보상·중단·증거복구](docs/43_REWARDED_AD_TRANSACTION.md)**
-12. **[참고 저장검사 결과·한계](docs/44_PERSISTENCE_VALIDATION_REPORT.md)**
+## v1.0 목표
+시골마을 하나, 고양이50종/최대50마리, 건물13종, 네 발 고양이의 실제 근무와 생활, 직접 돌봄에서 자동화로 성장하는 완결된 모바일 게임이다.
+건물별 직원은 최대3마리이며 희귀도·캐릭터레벨은 없다. 고유 기본능력과 근무 숙련으로 키운다.
+광고를 실제로 붙여 출시하되 광고 없이도 모든 핵심 콘텐츠와50마리 수집에 접근할 수 있어야 한다.
+지역 이동·후속맵·프레스티지·IAP·PvP는 현재 출시 범위 밖이다. 첫 한마리 관통 시험은 내부 개발 순서이며 작은 MVP만 출시하는 것이 아니다.
 
-## 데이터 적용 순서
-- [cats](data/cats.json): ID·성격·기본능력·외형. 상세 아트 필드 추가 필요.
-- [buildings](data/buildings.json):13종. 과거 주민회관/여관 후보 사용하지 않음.
-- [progression](data/progression.json) / [development](data/development_score.json):정원·발전도. 과거50/3,000/3,500점수는 대체됨.
-- [economy](data/economy_balance.json):기본 수익·가격·광고·숙련 수치 초안.
-- [onboarding](data/onboarding.json):최초1,000G + 추가600/2,900/1,000G 한 번씩. 총5,500G이며 중복지급하지 않음.
-- [discovery](data/discovery_rules.json):cats.primaryCondition은 설명, 실제조건은 이 파일.
-- [rescue timing](data/rescue_timing.json):정상42마리 시간 초안. 첫8마리는 onboarding 우선.
-- [통합 시나리오](data/integrated_simulation_scenarios.json) / [결과요약](reports/integrated_progression_v02.summary.json)
-- **[persistence contract](data/persistence_contract.json)** / [51개 검사결과](reports/persistence_validation_v01.json)
+## 선정한 구현 방향
+Unity6.3 LTS / C# / 2D URP / uGUI·TMP / SQLite / Google Mobile Ads·UMP / 최소 SSV Worker·D1.
+선정은 설치·호환검증 완료를 뜻하지 않는다. 정확한 에디터 패치와 패키지 잠금은 M0에서 실제 환경으로 확정한다.
+기본 광고는 보상형이며 강제 전면·배너·앱실행광고는 꺼둔다. 로컬 저장과 서버 영수증은 클라우드 마을 저장이 아니다.
+[46번 구현 기본값](docs/46_RUNTIME_AND_ASSET_BASELINE.md)에 지정 필지, 주택 정원, 아트·UI·꾸미기 제작 범위를 정리했다. 실제 이미지나 Unity 프로젝트를 이번 인계에서 생성한 것은 아니다.
 
-이번 저장 명세는 기존 경제·진행·발견·초기지원금을 바꾸지 않는다. 센터10 240만G는 과거 비교실험이며 기본320만G를 대체하지 않는다.
-광고중 자연완료된 단축대상에 대한 대체골드는 신규 상세 초안으로 장기시뮬레이션에는 아직 반영하지 않았다.
-캐릭터 시트 docs/21~26의 개성은 유지하되 밤/비/관계가 필수라는 구 예시보다37번 조건식을 우선한다.
+## 게임 데이터 원본
+| 파일 | 의미 |
+|---|---|
+| [cats.json](data/cats.json) |50개 고유ID·기본능력·성격·외형 초안 |
+| [buildings.json](data/buildings.json) |13종·5/10레벨·직원슬롯·역할 |
+| [progression.json](data/progression.json) |센터1~10·정원·발전도·축제조건 |
+| [development_score.json](data/development_score.json) |종류별 최고 완료레벨 집계 |
+| [economy_balance.json](data/economy_balance.json) |가격·수익·경험·광고 수치 초안 |
+| [onboarding.json](data/onboarding.json) |첫8마리·분할지원·첫 영업 |
+| [discovery_rules.json](data/discovery_rules.json) |50마리의 실행 가능한 조건식 |
+| [rescue_timing.json](data/rescue_timing.json) |정상42마리의 탐색·돌봄 시간 |
+| [persistence_contract.json](data/persistence_contract.json) |저장·정산·보상 계약 |
 
-## 검증
+초기자금은 최초1,000G + 추가600/2,900/1,000G를 한 번씩 지급하여 총5,500G다. 과거 최초5,500G 실험에 추가4,500G를 중복 적용하지 않는다.
+cats.primaryCondition은 설명 라벨이며 실행 조건은 discovery_rules다. home/square 선호별칭은 정규화한다.
+과거 문서의 주민회관/여관/14종, 발전도3,000/3,500, 보유30마리 예시보다 [49번 우선순위](docs/49_SPEC_AUTHORITY_AND_HANDOFF.md)를 따른다.
+
+## 주요 기획·검증 문서
+[컨셉](docs/00_CONCEPT_LOCK.md) · [주민 정체성](docs/06_RESIDENT_SIMULATION.md) · [성장](docs/07_RESIDENT_GROWTH.md) · [생활·관계](docs/11_LIFE_AI_AND_RELATIONSHIPS.md) · [건물](docs/16_BUILDING_LEVEL_SPEC.md) · [아트](docs/19_ART_DIRECTION.md).
+
+[경제](docs/33_ECONOMY_BALANCE_V01.md) · [첫30분](docs/36_FIRST_30_MINUTES.md) · [발견조건](docs/37_DISCOVERY_RULES_V01.md) · [발견검증](docs/38_DISCOVERY_VALIDATION_V01.md) · [통합진행](docs/39_INTEGRATED_PROGRESSION_V02.md) · [통합검증](docs/40_INTEGRATED_VALIDATION_REPORT.md).
+
+[저장·복구](docs/41_SAVE_AND_RECOVERY_CONTRACT.md) · [오프라인](docs/42_OFFLINE_SETTLEMENT_CONTRACT.md) · [광고보상](docs/43_REWARDED_AD_TRANSACTION.md) · [참고 저장검사](docs/44_PERSISTENCE_VALIDATION_REPORT.md).
+
+## 검증을 실행할 때
 ```sh
 python3 -S tools/validate_balance.py
 python3 -S tools/test_onboarding_contract.py
@@ -51,8 +58,13 @@ python3 -S tools/test_discovery_contract.py
 python3 -S tools/simulate_integrated_progression.py --include-events
 python3 -S tools/test_integrated_progression.py
 ```
-통합 검사는 전체이벤트 결과가 있으면38개, 없으면 결과검사6개를 스킵한다. 이전 고정입력 투영은 대화 ZIP에 있으며 data/에 덮어쓰지 않는다.
-신규 저장검사51개는 독립 참고모형으로 실행했다. Python 실행기 업로드는 연결 도구에서 차단되어 이번 Git에는 명세·계약·결과만 기록한다. 실행기와 테스트 원문은 대화 ZIP에 있다. 해당 소스가 있는 별도 작업 폴더에서 `python3 -S tools/test_persistence_contract.py`로 재현한다. 원래 전체시뮬레이터나 Unity/Godot 런타임을 재실행한 결과가 아니다.
-SQLite는 시험용 선택이며 엔진/저장 라이브러리를 확정한 것이 아니다. 서버서명·실광고·OS강제종료·백업복원·migration은 별도 구현/시험이 필요하다.
+현재 저장소의 실제 입력으로 실행하고 성공·실패·스킵을 기록한다. 과거 수치모형과 로컬 참고검사는 Unity/실광고/모바일 강제종료 통과 증거가 아니다.
+과거 통합모형은13개 시나리오/38개 검사를 보고했다. 전체 이벤트 결과가 없으면 재생검사 일부는 스킵된다. 이전 snapshot은 검증 당시 필드 투영이며 게임 data/를 덮어쓰면 안 된다.
+51개 저장 참고검사 보고서는 있으나 당시 Python 원문은 Git 업로드가 차단되어 이 저장소에 없다. 같은 검사를 수행했다고 가장하지 말고 계약에 맞는 C# 테스트를 구현한다.
+이번 인계 검사는 [manifest 검사](reports/handoff_manifest_check.json)만 실행했다. Unity나 장기 시뮬레이터를 다시 실행하지 않았다.
 
-다음: 엔진·광고·저장 어댑터/에셋 제작 흐름과 Astra 구현 명세 선택. 내부 첫1마리 관통 시험 후50마리 완결형 출시로 이어간다.
+## 미해결 사항
+후반 신규고양이 사이 공백, 전체 아트·방향별 정체성, 주택/꾸미기 포함 재밸런스, 네이티브 패키지 호환, 실기기 저장·광고/SSV는 개발·출시 게이트에 남아 있다. 센터10 비용240만G는 과거 비교안이며 기본320만G를 대체하지 않았다.
+계정·비밀·서명·공개배포·스토어 제출은 소유자 승인 후 진행한다. 설정 누락은 차단으로 남기고 임의로 완료 처리하지 않는다.
+
+**다음 실행: `prompts/ASTRA_START.md`로 M0를 시작하고, 통과 후 M1로 이어간다.**
