@@ -1,0 +1,29 @@
+{
+  "version": "0.1-working",
+  "principle": "Village development measures physical village growth, not resident collection.",
+  "awards": {
+    "buildingConstruction": {
+      "lv5MaxBuilding": 50,
+      "lv10MaxBuilding": 70
+    },
+    "buildingUpgrade": {
+      "lv5MaxBuildingPerLevel": 20,
+      "lv10MaxBuildingPerLevel": 15
+    },
+    "parkUpgradeBonusPerLevel": 10,
+    "townSquareUpgradeBonusPerLevel": 15
+  },
+  "excluded": [
+    "resident_count",
+    "cat_catalog_count",
+    "rescue_center_level",
+    "job_mastery",
+    "player_bond",
+    "resident_relationships"
+  ],
+  "notes": [
+    "Numbers are first-pass weights and must be audited against center thresholds.",
+    "Interior collection is excluded from mandatory development score in v1 baseline so decoration remains expressive rather than required.",
+    "Final festival threshold may be tuned after full score ceiling is calculated."
+  ]
+}
