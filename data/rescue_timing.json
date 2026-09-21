@@ -1,0 +1,26 @@
+{
+  "version":"0.1-integrated-timing-draft",
+  "status":"simulation_input_not_release_balance",
+  "clock":"real_seconds",
+  "onboardingSource":"data/onboarding.json",
+  "normalTierSource":"cat.discovery.minimumCenterLevel_at_reservation_not_current_center",
+  "normalByMinimumCenter":{
+    "3":{"searchSeconds":180,"careWorkSeconds":120},
+    "4":{"searchSeconds":300,"careWorkSeconds":120},
+    "5":{"searchSeconds":600,"careWorkSeconds":180},
+    "6":{"searchSeconds":900,"careWorkSeconds":240},
+    "7":{"searchSeconds":1200,"careWorkSeconds":300},
+    "8":{"searchSeconds":1800,"careWorkSeconds":480},
+    "9":{"searchSeconds":2700,"careWorkSeconds":600},
+    "10":{"searchSeconds":3600,"careWorkSeconds":600}
+  },
+  "interactionForegroundSeconds":20,
+  "finalWelcomeForegroundSeconds":20,
+  "finalWelcomeSearchSeconds":0,
+  "finalWelcomeCareWorkSeconds":0,
+  "care":{"normalRate":"max(1,center_level_output_factor * assigned_center_staff_efficiency_sum)","rateSnapshot":"at_care_start","onboardingRate":1,"manualFallbackRate":1,"benefitsFromAds":false},
+  "lifecycle":{"search":"real_time_offline_allowed","scene":"foreground_interaction_required","care":"begins_after_scene_and_basic_care_input_then_real_time","settlement":"foreground_confirmation_required","autoChainOffline":false,"reservationHoldsOneSlot":true,"readyResultExpires":false},
+  "lateCatIsNotStronger":true,
+  "timersDoNotIncreaseForPreviouslyEligibleCatsAfterCenterUpgrade":true,
+  "noteKo":"첫8마리 시간은 변경하지 않는다. 정상 탐색/돌봄은 이번 통합실험용 첫 수치다. 실제 애니메이션/게이지 조작시간이나 실기기 결과가 아니며 변경은 데이터 버전으로 관리한다."
+}

@@ -1,0 +1,23 @@
+{
+  "version":"0.2-integrated-simulation",
+  "sourceCommit":"4e756c34b6065b658a26dd9996b25a83c18a4215",
+  "status":"hypothetical_economy_and_actual_condition_model_not_engine_or_players",
+  "model":{"horizonDays":120,"onlineStepMinutes":0.25,"offlineStepMinutes":5,"firstSessionMinutes":30,"sessionMinutes":10,"adSecondsAssumed":30,"careWorkersReserved":1,"cashlessServiceWorkers":1,"roiLookaheadCreditedMinutes":2880,"snapshotsDays":[1,3,7,14,21,28,35,42,60,90,120]},
+  "cases":[
+    {"id":"integrated_2_noads","sessionsPerDay":2,"rewarded":false},
+    {"id":"integrated_2_ads","sessionsPerDay":2,"rewarded":true},
+    {"id":"integrated_4_noads","sessionsPerDay":4,"rewarded":false},
+    {"id":"integrated_4_ads","sessionsPerDay":4,"rewarded":true},
+    {"id":"integrated_2_offline_only","sessionsPerDay":2,"rewarded":true,"adKinds":["offline"]},
+    {"id":"integrated_2_fish_noads","sessionsPerDay":2,"rewarded":false,"openingBusiness":"fish_market"},
+    {"id":"sensitivity_2_slow_care","sessionsPerDay":2,"rewarded":false,"normalCareScale":4},
+    {"id":"sensitivity_2_slow_search","sessionsPerDay":2,"rewarded":false,"normalSearchScale":4},
+    {"id":"control_2_without_extra_discovery_gates","sessionsPerDay":2,"rewarded":false,"discoveryGateAblation":true},
+    {"id":"candidate_2_center10_cost75","sessionsPerDay":2,"rewarded":false,"centerCostMultipliers":{"10":0.75}},
+    {"id":"random_order_2_noads_seed7","sessionsPerDay":2,"rewarded":false,"randomSelection":true,"seed":7},
+    {"id":"random_order_2_noads_seed23","sessionsPerDay":2,"rewarded":false,"randomSelection":true,"seed":23},
+    {"id":"random_order_2_noads_seed51","sessionsPerDay":2,"rewarded":false,"randomSelection":true,"seed":51}
+  ],
+  "limits":["One highest-level representative per building type, not actual map housing costs.","No furnishings spend, friendship/facility bonuses, player errors, churn, or ad no-fill in baseline cases.","Successful 20-second interaction is assumed, no rendering or care minigame skill.","Deterministic bounded purchasing heuristic is not an optimal strategy or real users.","No live SDK, privacy/legal compliance, OS crash persistence, or ad revenue model."],
+  "adPolicy":"At most one offline, boost, and speedup per session when eligible; voluntary successful video assumption, not player quota; video time consumes session."
+}
