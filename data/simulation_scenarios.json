@@ -1,0 +1,45 @@
+{
+  "version": "0.1-proxy-simulation",
+  "sourceCommit": "011e24081671ecf38a66e86b3bb348feb9b0e4a2",
+  "status": "economic_pacing_experiment_not_full_game_validation",
+  "model": {
+    "horizonDays": 90,
+    "onlineStepMinutes": 0.5,
+    "offlineStepMinutes": 5,
+    "firstSessionMinutes": 30,
+    "sessionMinutes": 10,
+    "adSecondsAssumed": 30,
+    "rescueMode": "serial_center_level_capacity_proxy",
+    "combinedSearchCareSecondsByCenter": [60, 120, 300, 600, 1200, 1800, 3600, 3600, 5400, 7200],
+    "rescueTimerScale": 1,
+    "requireForegroundStartAndClaim": true,
+    "lastCatRequiresOther49": true,
+    "stableStaffing": true,
+    "careWorkersReserved": 1,
+    "cashlessServiceWorkers": 1,
+    "roiLookaheadCreditedMinutes": 2880,
+    "snapshotsDays": [1, 3, 7, 14, 21, 28, 35, 60, 90],
+    "limitations": [
+      "Individual primaryCondition strings are NOT executed; discovery/care use stated proxy timers.",
+      "No errors, churn, ad no-fill, manual skill, furnishings spending, extra housing copies or relationship bonuses.",
+      "Session schedules and deterministic purchasing/staffing are hypothetical, not real player observations.",
+      "Gold is left-integrated over bounded steps; construction/session/cap boundaries split intervals.",
+      "This does not validate save/restore, real SDK, engine performance or complete 50-cat reachability."
+    ]
+  },
+  "cases": [
+    {"id": "base_2_noads", "sessionsPerDay": 2, "rewarded": false},
+    {"id": "base_2_ads", "sessionsPerDay": 2, "rewarded": true},
+    {"id": "base_4_noads", "sessionsPerDay": 4, "rewarded": false},
+    {"id": "base_4_ads", "sessionsPerDay": 4, "rewarded": true},
+    {"id": "candidate_start5500_2_noads", "sessionsPerDay": 2, "rewarded": false, "initialGoldOverride": 5500},
+    {"id": "sensitivity_slow_rescue_2_noads", "sessionsPerDay": 2, "rewarded": false, "rescueTimerScale": 4},
+    {"id": "ablation_2_offline_bonus_only", "sessionsPerDay": 2, "rewarded": true, "adKinds": ["offline"]}
+  ],
+  "rewardedPolicy": {
+    "offlineBonusPerEligibleReturn": 1,
+    "incomeBoostPerSession": "at_most_one_when_existing_bank_cannot_cover_session",
+    "speedupPerSession": 1,
+    "note": "Voluntary hypothetical choices, not game-required or monetization-target quotas. All ads succeed in this experiment."
+  }
+}
