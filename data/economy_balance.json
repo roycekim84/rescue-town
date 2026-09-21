@@ -1,0 +1,61 @@
+{
+  "version": "0.1-economy-draft",
+  "status": "numeric_design_baseline_not_release_balance",
+  "units": {"currency":"gold","rate":"gold_per_real_minute","durations":"real_seconds","levelArrayIndex":"level_minus_one"},
+  "wallet": {"initialGold":1000,"initialGrantClaimKey":"v1_initial_grant","baseSupportGoldPerMinute":2,"supportRequiresStaff":false,"supportAffectedByBoost":false,"careActionsCostGold":false,"automaticUpkeepGold":0,"spendOnJobStart":true,"fractionalGoldPolicy":"keep_remainder_never_floor_each_tick"},
+  "levelCurves": {
+    "5": {"output":[1,1.3,1.65,2.05,2.5],"cost":[1,1.25,2,3.5,6],"durationSeconds":[30,60,180,600,1200]},
+    "10": {"output":[1,1.15,1.35,1.55,1.8,2.1,2.45,2.85,3.3,3.8],"cost":[1,1.2,1.6,2.2,3.2,4.8,7.2,10.8,16.2,24.3],"durationSeconds":[30,60,120,300,600,900,1800,2700,3600,5400]}
+  },
+  "centerUpgrade": {"costGoldByTargetLevel":[0,100,300,3000,25000,90000,250000,650000,1500000,3200000],"durationSecondsByTargetLevel":[0,0,10,60,180,600,1800,3600,7200,10800]},
+  "construction": {"costRoundUpToGold":10,"maxConcurrentJobsPerBuilding":1,"parallelAcrossBuildings":true,"existingOperationsDuringUpgrade":"continue_at_old_completed_level","newCapacityAndIncomeApply":"at_completion_only","newBuildingUnstaffedIncome":0,"timersUseElapsedRealTimeNotGameDay":true},
+  "buildingEconomy": {
+    "rescue_center":{"baseGoldPerMinute":0,"baseBuildCostGold":0,"mode":"care"},
+    "housing":{"baseGoldPerMinute":0,"baseBuildCostGold":200,"mode":"housing"},
+    "park":{"baseGoldPerMinute":0,"baseBuildCostGold":300,"mode":"life"},
+    "farm":{"baseGoldPerMinute":4,"baseBuildCostGold":1000,"mode":"abstract_dispatch_and_supply"},
+    "fish_market":{"baseGoldPerMinute":6,"baseBuildCostGold":1200,"mode":"commerce_and_supply"},
+    "cafe":{"baseGoldPerMinute":10,"baseBuildCostGold":6000,"mode":"commerce"},
+    "restaurant":{"baseGoldPerMinute":14,"baseBuildCostGold":18000,"mode":"commerce"},
+    "general_store":{"baseGoldPerMinute":10,"baseBuildCostGold":12000,"mode":"commerce"},
+    "workshop":{"baseGoldPerMinute":0,"baseBuildCostGold":40000,"mode":"crafting"},
+    "grooming":{"baseGoldPerMinute":12,"baseBuildCostGold":60000,"mode":"commerce"},
+    "clinic":{"baseGoldPerMinute":0,"baseBuildCostGold":50000,"mode":"care"},
+    "bakery":{"baseGoldPerMinute":16,"baseBuildCostGold":100000,"mode":"commerce"},
+    "town_square":{"baseGoldPerMinute":0,"baseBuildCostGold":90000,"mode":"event"}
+  },
+  "staff": {
+    "maximum":3,"slotWeights":[1,0.7,0.5],"weightOrder":"descending_efficiency",
+    "efficiency":{"constant":0.8,"primaryWeight":0.7,"secondaryWeight":0.3,"abilityCoefficient":0.04,"masteryCoefficient":0.003},
+    "personalityDirectIncomeMultiplier":1,"maxTeamworkBonus":0.05,"maxFacilityItemBonus":0.05,"visualBreaksAndOffscreenDoNotStopWorkCredit":true
+  },
+  "supply": {
+    "kind":"shared_capacity_not_inventory","missingSupplyMultiplier":1,"fullSupplyMultiplier":1.15,
+    "providers":{"farm":{"baseUnitsPerMinute":10},"fish_market":{"baseUnitsPerMinute":6}},
+    "consumers":{"restaurant":{"farm":6,"fish_market":4},"bakery":{"farm":5}},
+    "demandUsesConsumerLevelAndStaff":true,"providerCoverage":"min(1,output/sum_active_consumer_demand)","consumerCoverage":"demand_weighted_average","costsOrItemsConsumed":false
+  },
+  "growth": {
+    "workMinutes":"credited_real_time_while_formally_assigned","abilityXpPerWorkMinute":1,"primaryXpFraction":0.7,"secondaryXpFraction":0.3,
+    "abilityStepCost":"10 * current_ability^2","abilityMax":20,"overflowFromCappedAbility":"discard",
+    "masteryCurve":[[0,0],[25,120],[50,480],[75,2160],[100,10080]],"masteryCurveColumns":["mastery","cumulativeCreditedWorkMinutes"],
+    "masteryInterpolation":"piecewise_linear","adsMultiplyGrowth":false,"lossOnReassignment":false
+  },
+  "offline": {
+    "maxCreditedSeconds":28800,"organicIncomeMultiplier":1,"growthUsesSameCreditedWindow":true,"window":"first_8h_after_last_settlement",
+    "constructionTimersCapped":false,"rateChanges":"split_at_completed_upgrades_and_growth_ticks","adBoostApplies":false,"negativeElapsedSeconds":"clamp_to_zero"
+  },
+  "ads": {
+    "requiredForProgress":false,"interstitialEnabledInBaseline":false,
+    "offlineExtra":{"bonusMultiplierOfOrganicBase":1,"maxClaimsPerSettlement":1,"minOfflineSeconds":300},
+    "speedup":{"secondsPerCompletedAd":600,"maxClaimsPerJob":3,"minRemainingSecondsToOffer":180,"maxCredit":"min(600,remaining_seconds)","targets":["building_upgrade","center_upgrade","craft","search"]},
+    "incomeBoost":{"goldMultiplier":2,"secondsPerCompletedAd":600,"maximumBankedSeconds":1800,"clock":"foreground_gameplay_only","affectsSupport":false,"affectsGrowth":false,"affectsSupply":false,"multiplyWithOfflineBonus":false},
+    "rewardLedger":"exactly_once_per_authorized_reward_transaction","failedAdGrantsExtra":false,"organicRewardNeverLostOnAdFailure":true
+  },
+  "crafting": {
+    "queueSlots":1,"requiresAssignedWorker":true,"noWorker":"pause_not_delete",
+    "recipes":{"basic":{"costGold":2000,"workSeconds":180},"standard":{"costGold":12000,"workSeconds":900},"elaborate":{"costGold":40000,"workSeconds":3600}},
+    "recipeGrowthSource":"ordinary_credited_work_minutes_not_completion_clicks","completedStyleReusable":true
+  },
+  "pace": {"targetDaysNoAds":[28,35],"targetDaysModerateAds":[21,28],"targetDaysActiveAds":[14,21],"validated":false,"note":"Targets, not simulated completion results. No calendar lock or daily ad quota."}
+}

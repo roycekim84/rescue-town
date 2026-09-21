@@ -1,29 +1,15 @@
 {
-  "version": "0.1-working",
-  "principle": "Village development measures physical village growth, not resident collection.",
-  "awards": {
-    "buildingConstruction": {
-      "lv5MaxBuilding": 50,
-      "lv10MaxBuilding": 70
-    },
-    "buildingUpgrade": {
-      "lv5MaxBuildingPerLevel": 20,
-      "lv10MaxBuildingPerLevel": 15
-    },
-    "parkUpgradeBonusPerLevel": 10,
-    "townSquareUpgradeBonusPerLevel": 15
+  "version":"0.2-economy-draft",
+  "principle":"시설의 최초 완성 진척도. 소비 재화가 아니다.",
+  "aggregation":"sum_score_of_highest_completed_level_per_building_type",
+  "repeatHousingCopiesAddDevelopment":false,
+  "awards":{
+    "buildingConstruction":{"lv5MaxBuilding":50,"lv10MaxBuilding":70},
+    "buildingUpgrade":{"lv5MaxBuildingPerLevel":20,"lv10MaxBuildingPerLevel":15},
+    "parkUpgradeBonusPerLevel":10,"townSquareUpgradeBonusPerLevel":15
   },
-  "excluded": [
-    "resident_count",
-    "cat_catalog_count",
-    "rescue_center_level",
-    "job_mastery",
-    "player_bond",
-    "resident_relationships"
-  ],
-  "notes": [
-    "Numbers are first-pass weights and must be audited against center thresholds.",
-    "Interior collection is excluded from mandatory development score in v1 baseline so decoration remains expressive rather than required.",
-    "Final festival threshold may be tuned after full score ceiling is calculated."
-  ]
+  "excluded":["rescue_center","resident_count","cat_catalog_count","job_mastery","player_bond","resident_relationships","interior_collection"],
+  "historicalProgressPolicy":"persist_highest_completed_level_once; no repeat grant on load, rebuild, or redecorate",
+  "scoreFormula":"construction + (completedLevel - 1) * (upgradePerLevel + typeBonus)",
+  "balanceStatus":"draft_reachability_checked_not_playtested"
 }

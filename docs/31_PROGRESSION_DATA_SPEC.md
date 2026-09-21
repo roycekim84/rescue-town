@@ -1,61 +1,39 @@
-# Progression Data Specification
+# Progression Data Specification — 0.2 Economy Draft
 
-## Purpose
-Connect the 50-resident roster, 13 buildings and Rescue Center Lv1~10 into one data-driven progression spine.
+## 기준
+현재 진행 조건: `data/progression.json`.
+비용/시간: `data/economy_balance.json`.
+시설 점수: `data/development_score.json`.
+이번 변경과 검증 근거: [경제 검증 기록](34_ECONOMY_VALIDATION_REPORT.md).
 
-## Rescue Center
-The Rescue Center is the sole source of:
-- resident capacity
-- current level cap for ordinary buildings
-- system/building unlock stages
+구조센터는 유일한 주민 상한/건물 레벨 제한/해금 단계의 기준이다.
+일반 건물 현재 상한 = `min(building.maxLevel, rescueCenterLevel)`.
 
-Current building level cap:
-`min(building.maxLevel, rescueCenterLevel)`
+## 확장 조건
+주민 수, 발전도, 숙련 주민 수, 골드의 네 축만 사용한다.
+친밀도·관계는 메인 진행 필수 조건이 아니다.
+주민 수는 돌봄을 마친 고양이를 센터 임시 숙소 거주 여부와 관계없이 센다.
+현재 정원 사용량은 돌봄 대기/진행 중과 현장 예약까지 포함하여 초과 구조를 막는다.
 
-## Upgrade Requirements
-Center upgrades use only four progression axes:
-1. resident count
-2. village development score
-3. job mastery milestones
-4. gold
+목표 Lv2~10 발전도: **0 / 0 / 100 / 300 / 450 / 650 / 850 / 1100 / 1400**.
+초반에는 정원을 다 채우는 단계가 있으나 중후반은 반드시 만원이어야 하는 조건을 피한다.
+숙련 요구는 서로 다른 주민 수를 센다. 한 주민의 여러 직업 숙련을 여러 주민으로 계산하지 않는다.
+Lv2 첫 배치부터 숙련이 축적되고, UI 공개 시점과 경험치 시작 시점은 다르다.
 
-Player bond and resident relationships are deliberately excluded as mandatory gates.
+goldBalanceKey와 goldBalanceIndex가 경제 JSON의 센터 확장 비용을 참조한다.
+레벨 배열의 dev/mastery는 호환용 미러이며 upgradeRequirements와 같은 값이어야 한다.
 
-## Working Center Requirements
-The current baseline is encoded in `data/progression.json`.
-Gold costs remain TBD until economy simulation.
+## 발전도
+주민·도감·친밀도·관계·센터 자체·인테리어 수집은 제외한다.
+건물 종류별 최고 완성 레벨의 점수를 합산한다. 주택을 반복 건설해 점수를 무제한 늘릴 수 없다.
+구입 시가 아닌 공사 완료 시 최고 완성 레벨을 갱신한다. 로드/재설치로 재지급하지 않는다.
 
-Important: the player does not need to fill the current resident cap exactly before every center upgrade. This prevents one undiscovered cat from hard-blocking the main game.
+## 축제
+센터Lv10, 도감50/50, 발전도1600, 일반 건물12종 모두 건설, 마을광장Lv5.
+모든 건물 최고 레벨은 필수가 아니다. 농장/카페/식당이Lv5인 상태도 시설 점수 조건을 만족시킬 수 있다.
+축제에 추가 골드 입장료는 없다.
 
-## Village Development Score
-Development score represents **physical village growth**.
-
-Included:
-- first construction of ordinary buildings
-- ordinary building upgrades
-- additional small weighting for park/town-square development
-
-Excluded:
-- number of cats
-- catalog completion
-- Rescue Center level itself
-- job mastery
-- bond
-- relationships
-
-Those systems already have their own meaning and should not be double-counted.
-
-## Decoration
-Interior collection is not part of mandatory development score in the initial v1 baseline. Players should be able to decorate for taste without feeling forced to craft every item for progression.
-
-## Festival
-Working ending requirements:
-- Rescue Center Lv10
-- 50/50 catalog
-- village development 3500 (tunable)
-- all major building types constructed
-
-All buildings at max level are NOT required for the ending.
-
-## Balance Boundary
-Development award values and the final threshold are first-pass numbers, not release balance. They must be checked against the theoretical score ceiling and actual playtest pacing before lock.
+## 한계
+이 점수/비용은 첫 검증 가능한 초안이다.
+건물 점수의 도달 가능성과 주민 정원 범위는 확인했으나,
+모든 고양이 발견 조건 및 완주 일수는 후속 시뮬레이션/실기기 테스트에서 확인한다.
