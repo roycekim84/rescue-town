@@ -1,0 +1,542 @@
+{
+  "version": "0.1-working",
+  "rules": {
+    "maxStaffPerStaffedBuilding": 3,
+    "assignment": "one_resident_one_staff_building",
+    "assignmentChangeCost": 0,
+    "economyAnimationDecoupled": true
+  },
+  "buildings": [
+    {
+      "id": "rescue_center",
+      "name": "구조센터",
+      "maxLevel": 10,
+      "unlock": 1,
+      "staff": {
+        "1": 0,
+        "2": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "care",
+      "secondary": "focus",
+      "role": [
+        "main_progression",
+        "care",
+        "automation"
+      ],
+      "activities": [
+        "feed",
+        "water",
+        "bedding",
+        "comfort",
+        "play"
+      ],
+      "milestones": {
+        "1": [
+          "direct_care"
+        ],
+        "2": [
+          "staff_1",
+          "feeding_automation"
+        ],
+        "3": [
+          "staff_2",
+          "settlement",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_stage_2"
+        ],
+        "7": [
+          "visual_stage_3"
+        ],
+        "10": [
+          "visual_final",
+          "festival_preparation"
+        ]
+      }
+    },
+    {
+      "id": "housing",
+      "name": "주택",
+      "maxLevel": 5,
+      "unlock": 3,
+      "staff": {},
+      "primary": null,
+      "secondary": null,
+      "role": [
+        "housing",
+        "rest"
+      ],
+      "activities": [
+        "sleep",
+        "eat_at_home",
+        "look_window",
+        "play_toy"
+      ],
+      "milestones": {
+        "1": [
+          "basic_home"
+        ],
+        "3": [
+          "rest_furniture_slot",
+          "visual_stage_1"
+        ],
+        "5": [
+          "visual_final",
+          "extra_home_behaviors"
+        ]
+      }
+    },
+    {
+      "id": "park",
+      "name": "공원",
+      "maxLevel": 5,
+      "unlock": 3,
+      "staff": {},
+      "primary": null,
+      "secondary": null,
+      "role": [
+        "rest",
+        "social",
+        "behavior_provider"
+      ],
+      "activities": [
+        "sit",
+        "nap",
+        "play",
+        "smell_flower",
+        "chase_butterfly",
+        "socialize"
+      ],
+      "milestones": {
+        "1": [
+          "bench",
+          "walk"
+        ],
+        "2": [
+          "flower_area"
+        ],
+        "3": [
+          "play_area",
+          "visual_stage_1"
+        ],
+        "4": [
+          "large_tree_rest"
+        ],
+        "5": [
+          "visual_final",
+          "full_park_behaviors"
+        ]
+      }
+    },
+    {
+      "id": "farm",
+      "name": "농장",
+      "maxLevel": 10,
+      "unlock": 4,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "6": 3
+      },
+      "primary": "activity",
+      "secondary": "focus",
+      "role": [
+        "supply",
+        "training"
+      ],
+      "activities": [
+        "push_seed",
+        "water",
+        "harvest",
+        "push_basket"
+      ],
+      "milestones": {
+        "1": [
+          "small_field"
+        ],
+        "3": [
+          "staff_2",
+          "irrigation",
+          "visual_stage_1"
+        ],
+        "6": [
+          "staff_3",
+          "auto_irrigation",
+          "visual_stage_2"
+        ],
+        "8": [
+          "greenhouse"
+        ],
+        "10": [
+          "visual_final",
+          "master_harvest"
+        ]
+      }
+    },
+    {
+      "id": "fish_market",
+      "name": "어시장",
+      "maxLevel": 5,
+      "unlock": 4,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "activity",
+      "secondary": "social",
+      "role": [
+        "supply",
+        "commerce"
+      ],
+      "activities": [
+        "push_fish_box",
+        "display_fish",
+        "serve_customer",
+        "carry"
+      ],
+      "milestones": {
+        "1": [
+          "small_stall"
+        ],
+        "3": [
+          "staff_2",
+          "shop_upgrade",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "cafe",
+      "name": "카페",
+      "maxLevel": 10,
+      "unlock": 5,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "6": 3
+      },
+      "primary": "social",
+      "secondary": "sense",
+      "role": [
+        "commerce",
+        "social"
+      ],
+      "activities": [
+        "check_order",
+        "paw_coffee_machine",
+        "carry_tray",
+        "collect_cup",
+        "serve"
+      ],
+      "milestones": {
+        "1": [
+          "small_cafe"
+        ],
+        "3": [
+          "staff_2",
+          "auto_coffee_machine",
+          "visual_stage_1"
+        ],
+        "6": [
+          "staff_3",
+          "terrace",
+          "visual_stage_2"
+        ],
+        "8": [
+          "interior_slot_plus"
+        ],
+        "10": [
+          "visual_final",
+          "special_drink_behavior"
+        ]
+      }
+    },
+    {
+      "id": "restaurant",
+      "name": "식당",
+      "maxLevel": 10,
+      "unlock": 6,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "6": 3
+      },
+      "primary": "social",
+      "secondary": "activity",
+      "role": [
+        "commerce",
+        "consumption"
+      ],
+      "activities": [
+        "paw_cooker",
+        "carry_food",
+        "collect_dish",
+        "clean_table"
+      ],
+      "milestones": {
+        "1": [
+          "small_restaurant"
+        ],
+        "3": [
+          "staff_2",
+          "cooking_upgrade",
+          "visual_stage_1"
+        ],
+        "6": [
+          "staff_3",
+          "kitchen_expand",
+          "visual_stage_2"
+        ],
+        "8": [
+          "interior_slot_plus"
+        ],
+        "10": [
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "general_store",
+      "name": "잡화점",
+      "maxLevel": 5,
+      "unlock": 6,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "social",
+      "secondary": "focus",
+      "role": [
+        "commerce",
+        "behavior_provider"
+      ],
+      "activities": [
+        "stock_goods",
+        "check_order",
+        "push_cart",
+        "paw_checkout"
+      ],
+      "milestones": {
+        "1": [
+          "small_store",
+          "shopping_behavior"
+        ],
+        "3": [
+          "staff_2",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "workshop",
+      "name": "공방",
+      "maxLevel": 5,
+      "unlock": 7,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "sense",
+      "secondary": "focus",
+      "role": [
+        "crafting",
+        "interior"
+      ],
+      "activities": [
+        "roll_yarn",
+        "sort_material",
+        "paw_crafter",
+        "collect_item"
+      ],
+      "milestones": {
+        "1": [
+          "basic_interior_crafting"
+        ],
+        "3": [
+          "staff_2",
+          "craft_categories_plus",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "advanced_interior",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "grooming",
+      "name": "미용실",
+      "maxLevel": 5,
+      "unlock": 8,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "sense",
+      "secondary": "social",
+      "role": [
+        "life_service",
+        "commerce"
+      ],
+      "activities": [
+        "groom",
+        "paw_dryer",
+        "clean_fur",
+        "social_groom"
+      ],
+      "milestones": {
+        "1": [
+          "basic_service"
+        ],
+        "3": [
+          "staff_2",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "clinic",
+      "name": "진료소",
+      "maxLevel": 5,
+      "unlock": 8,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "care",
+      "secondary": "focus",
+      "role": [
+        "life_service"
+      ],
+      "activities": [
+        "paw_exam_machine",
+        "carry_medicine",
+        "bring_blanket",
+        "comfort_patient"
+      ],
+      "milestones": {
+        "1": [
+          "basic_checkup"
+        ],
+        "3": [
+          "staff_2",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "bakery",
+      "name": "빵집",
+      "maxLevel": 5,
+      "unlock": 9,
+      "staff": {
+        "1": 1,
+        "3": 2,
+        "5": 3
+      },
+      "primary": "sense",
+      "secondary": "social",
+      "role": [
+        "commerce",
+        "consumption"
+      ],
+      "activities": [
+        "paw_mixer",
+        "carry_bread_basket",
+        "display_bread",
+        "serve_customer"
+      ],
+      "milestones": {
+        "1": [
+          "small_bakery"
+        ],
+        "3": [
+          "staff_2",
+          "visual_stage_1"
+        ],
+        "5": [
+          "staff_3",
+          "visual_final"
+        ]
+      }
+    },
+    {
+      "id": "town_square",
+      "name": "마을광장",
+      "maxLevel": 5,
+      "unlock": 9,
+      "staff": {},
+      "primary": null,
+      "secondary": null,
+      "role": [
+        "social",
+        "event",
+        "ending"
+      ],
+      "activities": [
+        "meet_friend",
+        "watch_event",
+        "sit",
+        "play",
+        "festival"
+      ],
+      "milestones": {
+        "1": [
+          "small_square"
+        ],
+        "3": [
+          "stage",
+          "benches",
+          "visual_stage_1"
+        ],
+        "5": [
+          "visual_final",
+          "festival_ready"
+        ]
+      }
+    }
+  ],
+  "supplyLinks": [
+    {
+      "from": "farm",
+      "to": "restaurant",
+      "type": "food_supply"
+    },
+    {
+      "from": "fish_market",
+      "to": "restaurant",
+      "type": "food_supply"
+    },
+    {
+      "from": "farm",
+      "to": "bakery",
+      "type": "ingredient_supply"
+    }
+  ]
+}
